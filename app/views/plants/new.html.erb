@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>Add a new Plant</h1>
+      <!-- /gardens/2/plants -->
+      <!-- /plants -->
+      <%= simple_form_for [@garden, @plant] do |f| %>
+        <%#= f.association :garden %>
+        <%= f.input :name %>
+        <%= f.input :size %>
+        <%= f.input :durability, label: "How hard is it to kill the plant?", hint: "be kind to the plant and don't kill it on purpose" %>
+        <%= f.input :color, collection: ["blue", "red", "green"] %>
+        <%= f.submit "Add Plant", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

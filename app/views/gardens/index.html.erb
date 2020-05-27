@@ -1,0 +1,18 @@
+<%= render 'banner', background: "https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80", title: "My Garden App 🌴"  %>
+<div class="container-fluid">
+  <div class="row my-3">
+    <% @gardens.each do |garden| %>
+      <div class="col-xs-12 col-sm-6">
+        <%= link_to garden_path(garden) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= garden.banner_url %>)">
+            <%= garden.name %>
+            <!-- link_to path do-->
+            <!-- end -->
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<%= link_to 'New Garden', new_garden_path %>

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: MyString
+  size: MyString
+  name: MyString
+  durability: MyString
+  garden: one
+
+two:
+  color: MyString
+  size: MyString
+  name: MyString
+  durability: MyString
+  garden: two
+
+valid_plant: 
+  color: "red"
+  size: "medium"
+  name: "mint"
+  durability: "durable"
+  garden: valid
+
+valid_plant2: 
+  color: "red"
+  size: "medium"
+  name: "mint"
+  durability: "durable"
+  garden: valid

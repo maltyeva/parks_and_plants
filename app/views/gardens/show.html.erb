@@ -1,0 +1,13 @@
+<%= render 'banner', background: @garden.banner_url, title: @garden.name %>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to "Add a Plant", new_garden_plant_path(@garden), class: "btn btn-primary"  %>
+      <% @garden.plants.each do |plant| %>
+        <p>🌹 <%= plant.name %> <%= link_to "💩", plant_path(plant), method: :delete, data: {confirm: "Are you sure?"} %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %>
